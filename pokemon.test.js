@@ -1,4 +1,4 @@
-const {Pokemon, Fire, Water, Grass, Normal} = require('./pokemon')
+const {Pokemon, Fire, Water, Grass, Normal, Charmander, Bulbasaur, Squirtle, Rattata, Pokeball} = require('./pokemon')
 
 describe ("Pokemon: Properties", () => {
     test("shows that the Pokemon classes has 4 properties required ", () => {
@@ -77,6 +77,76 @@ describe ("Type: Fire", () => {
         })
     })
     describe("isEffectiveAgainst", () => {
-        test("shoule return true when compared pokemon ")
+        test("should return true when compared to pokemon with type grass", () => {
+            const testFire = new Fire()
+            const testGrass = new Grass()
+            expect(testFire.isEffectiveAgainst(testGrass)).toBe(true)
+        })
+        test("should return false when compared to pokemon with type water", () => {
+            const testFire = new Fire()
+            const testWater = new Water()
+            expect(testFire.isEffectiveAgainst(testWater)).toBe(false)
+        })
     })
+    describe("isWeakTo", () => {
+        test("should return true when compared to pokemon with type water", () => {
+            const testFire = new Fire()
+            const testWater = new Water()
+            expect(testFire.isWeakTo(testWater)).toBe(true)
+        })
+        test("should return false when compared to pokemon with type grass", () => {
+            const testFire = new Fire()
+            const testGrass = new Grass()
+            expect(testFire.isWeakTo(testGrass)).toBe(false)
+        })
+    })
+
 });
+describe ("Type: Charmander", () => {
+    describe("Properties", () => {
+        test("should extend Fire class", () => {
+            const testPoke = new Charmander()
+            expect(testPoke).toBeInstanceOf(Pokemon)
+            expect(testPoke).toBeInstanceOf(Fire)
+        })
+        test("should contain expected values for Charmander", () => {
+            const testPoke = new Charmander()
+            expect(testPoke.name).toBe('Charmander')
+            expect(testPoke.type).toBe('fire')
+            expect(testPoke.move).toBe('ember')
+        })
+    })
+})
+describe ("Type: Bulbasaur", () => {
+    describe("Properties", () => {
+        test("should extend Grass class", () => {
+            const testPoke = new Bulbasaur()
+            expect(testPoke).toBeInstanceOf(Pokemon)
+            expect(testPoke).toBeInstanceOf(Grass)
+        })
+        test("should contain expected values for Bulbasaur", () => {
+            const testPoke = new Bulbasaur()
+            expect(testPoke.name).toBe('Bulbasaur')
+            expect(testPoke.type).toBe('grass')
+            expect(testPoke.move).toBe('vine whip')
+        })
+    })
+})
+describe ("Pokeball", () => {
+    describe("Pokeball: Properties", () => {
+        test("Pokeball has a Pokemon property", () => {
+            const testPokeball = new Pokeball
+            expect(testPokeball).toHaveProperty("pokemon")
+            
+        })
+        
+    })
+    describe("Throw", () => {
+        test("If the pokeball is empty it will capture the passed Pokemon.", () => {
+            const testPokeball = new Pokeball
+            expect(testPokeball).toHaveProperty("pokemon")
+            
+        })
+        
+    })
+})
