@@ -1,4 +1,4 @@
-const {Pokemon} = require('./pokemon')
+const {Pokemon, Fire, Water, Grass, Normal} = require('./pokemon')
 
 describe ("Pokemon: Properties", () => {
     test("shows that the Pokemon classes has 4 properties required ", () => {
@@ -62,5 +62,21 @@ describe ("Pokemon: Methods", () => {
         eevee.takeDamage(20)
         expect(eevee.hitPoints).toBe(35)
         expect(eevee.hasFainted()).toBe(false)
+    })
+});
+describe ("Type: Fire", () => {
+    describe("Properties", () => {
+        test("should extend Pokemon class", () => {
+            const testPoke = new Fire()
+            expect(testPoke).toBeInstanceOf(Pokemon)
+        });
+        test("should have a property of type with a value of fire", () => {
+            const testPoke = new Fire()
+            expect(testPoke).toHaveProperty('type')
+            expect(testPoke.type).toBe('fire')
+        })
+    })
+    describe("isEffectiveAgainst", () => {
+        test("shoule return true when compared pokemon ")
     })
 });

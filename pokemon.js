@@ -34,7 +34,8 @@ class Fire extends Pokemon{
         this.type = "fire"
     }
     isEffectiveAgainst(pokemon){
-
+        if (pokemon.type === grass) return true ; return false
+        
     }
 }
 class Water extends Pokemon{
@@ -58,4 +59,4 @@ class Normal extends Pokemon{
 
 
 
-module.exports = {Pokemon}
+module.exports = {Pokemon, Fire, Water, Grass, Normal}
