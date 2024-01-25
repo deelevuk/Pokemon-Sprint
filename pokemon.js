@@ -98,7 +98,7 @@ class Water extends Pokemon{
 
 class Squirtle extends Water {
     constructor(name, hitPoints, attackDamage, move){
-        super(name, hitPoints, attackDamage, move = "water gun")
+        super('Squirtle', hitPoints, attackDamage, move = "water gun")
         
     }
 }
@@ -138,7 +138,7 @@ class Normal extends Pokemon{
 
 class Rattata extends Normal {
     constructor(name, hitPoints, attackDamage, move){
-        super(name, hitPoints, attackDamage, move)
+        super("Rattata", hitPoints, attackDamage, move)
         
     }
 }
