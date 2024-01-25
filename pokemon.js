@@ -11,10 +11,8 @@ class Pokemon {
         this. attackDamage = attackDamage
         this.move = move
         
-
     }
-    // takeDamage
-    // Will take a number and reduce its hitPoints by the number given.
+
     takeDamage(damage){
         // console.log(this.hitPoints, "--- before damage");
         this.hitPoints -= damage
@@ -30,6 +28,33 @@ class Pokemon {
     }
 }
 
+class Fire extends Pokemon{
+    constructor(name, hitPoints, attackDamage, move = "tackle"){
+        super(name, hitPoints, attackDamage, move = "tackle")
+        this.type = "fire"
+    }
+    isEffectiveAgainst(pokemon){
+
+    }
+}
+class Water extends Pokemon{
+    constructor(name, hitPoints, attackDamage, move = "tackle"){
+        super(name, hitPoints, attackDamage, move = "tackle")
+        this.type = "water"
+    }
+}
+class Grass extends Pokemon{
+    constructor(name, hitPoints, attackDamage, move = "tackle"){
+        super(name, hitPoints, attackDamage, move = "tackle")
+        this.type = "grass"
+    }
+}
+class Normal extends Pokemon{
+    constructor(name, hitPoints, attackDamage, move = "tackle"){
+        super(name, hitPoints, attackDamage, move = "tackle")
+        this.type = "normal"
+    }
+} 
 
 
 
