@@ -1,4 +1,4 @@
-
+const Pokeball = require('./pokeball')
 // Pokemon General
 // Type
 // Specific Pokemon
@@ -27,39 +27,6 @@ class Pokemon {
         if (this.hitPoints === 0) return true ; return false
     }
 }
-
-class Pokeball {
-    constructor (pokemon) {
-        this.pokemon = pokemon
-        this.isEmpty = false
-    }
-
-    throw(pokemon) {
-
-    }
-}
-
-/*
-Pokeball behaviours include:
-
-being able to store a Pokemon.
-throw it to catch a Pokemon.
-throw it to release it for battle.
-check which Pokemon is in the pokeball.
-
-Methods
-
-throw
-
-Takes a Pokemon object as an argument. If the pokeball is empty it will capture the passed Pokemon.
-If it isn't empty ,the user should not be allowed to capture a pokemon with it!
-The throw method should also console log something like ("you caught pokemonX's name") when a Pokemon has been caught.
-Additionally, the method can be invoked with no argument.
-In this case the method should return the stored Pokemon. The throw method should console log something like ("GO pokemonX's name!!") in this scenario.
-If the ball is empty then the user should be informed accordingly.
-
-*/
-
 
 class Fire extends Pokemon{
     constructor(name, hitPoints, attackDamage, move){
@@ -143,34 +110,5 @@ class Rattata extends Normal {
     }
 }
 
-/*
-Pokeball behaviours include:
 
-being able to store a Pokemon.
-throw it to catch a Pokemon.
-throw it to release it for battle.
-check which Pokemon is in the pokeball.
-
-Methods
-
-throw
-
-Takes a Pokemon object as an argument. If the pokeball is empty it will capture the passed Pokemon.
-If it isn't empty ,the user should not be allowed to capture a pokemon with it!
-The throw method should also console log something like ("you caught pokemonX's name") when a Pokemon has been caught.
-Additionally, the method can be invoked with no argument.
-In this case the method should return the stored Pokemon. The throw method should console log something like ("GO pokemonX's name!!") in this scenario.
-If the ball is empty then the user should be informed accordingly.
-
-isEmpty
-
-Should return a boolean representing whether or not a Pokemon is stored inside it.
-
-contains
-
-Should return the name of the Pokemon that is stored or
-If the pokeball is empty is should return "empty ...".
-
-*/
-
-module.exports = {Pokemon, Fire, Water, Grass, Normal, Charmander, Squirtle, Bulbasaur, Rattata, Pokeball}
+module.exports = {Pokemon, Fire, Water, Grass, Normal, Charmander, Squirtle, Bulbasaur, Rattata}

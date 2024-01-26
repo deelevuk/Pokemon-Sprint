@@ -1,4 +1,5 @@
-const {Pokemon, Fire, Water, Grass, Normal, Charmander, Bulbasaur, Squirtle, Rattata, Pokeball} = require('./pokemon')
+const {Pokemon, Fire, Water, Grass, Normal, Charmander, Bulbasaur, Squirtle, Rattata} = require('./pokemon')
+const Pokeball = require('./pokeball')
 describe("POKEMON", () => {
     describe ("Properties", () => {
     test("shows that the Pokemon classes has 4 properties required ", () => {
@@ -39,7 +40,7 @@ describe("POKEMON", () => {
         eevee.takeDamage(20)
         expect(eevee.hitPoints).toBe(15)
     })
-    test("returns the attackDamage when invoked ", () => {
+    test("returns the attackDamage when useMove is invoked ", () => {
         const eevee = new Pokemon("Eevee", 55, 18, "Headbutt")
         const actual = eevee.useMove()
         expect(actual).toBe(18)
@@ -278,20 +279,4 @@ describe("SPECIES", () => {
             })
         })
         })
-})
-describe ("POKEBALL", () => {
-    describe("Properties", () => {
-        test("Pokeball has a Pokemon property", () => {
-            const testPokeball = new Pokeball
-            expect(testPokeball).toHaveProperty("pokemon")
-        })
-        
-    })
-    describe("Throw", () => {
-        test("If the pokeball is empty it will capture the passed Pokemon.", () => {
-            const testPokeball = new Pokeball
-            expect(testPokeball).toHaveProperty("pokemon")    
-        })
-        
-    })
 })
