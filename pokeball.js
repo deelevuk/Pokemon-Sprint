@@ -1,5 +1,4 @@
 const {Pokemon, Fire, Water, Grass, Normal, Charmander, Bulbasaur, Squirtle, Rattata} = require('./pokemon')
-const Trainer = require('./trainer')
 
 class Pokeball {
     constructor (pokemon) {
@@ -30,6 +29,25 @@ class Pokeball {
     }
 }
 
+class Trainer{
+
+    constructor(){
+        this.belt = [new Pokeball(), 
+            new Pokeball(), 
+            new Pokeball(), 
+            new Pokeball(), 
+            new Pokeball(), 
+            new Pokeball()]
+        // const pokeball1 = new Pokeball
+
+        // this.belt.push(pokeball1)
+        console.log(this.belt)
+    }
+    catch(pokemon){
+            
+    }
+}
+
 /*
 Pokeball behaviours include:
 
@@ -51,4 +69,4 @@ If the ball is empty then the user should be informed accordingly.
 
 */
 
-module.exports = Pokeball
+module.exports = {Pokeball, Trainer}

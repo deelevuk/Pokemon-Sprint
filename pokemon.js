@@ -1,5 +1,4 @@
 const Pokeball = require('./pokeball')
-const Trainer = require('./trainer')
 
 class Pokemon {
     constructor (name, hitPoints, attackDamage, move = "tackle")

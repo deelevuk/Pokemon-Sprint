@@ -1,6 +1,5 @@
 const {Pokemon, Fire, Water, Grass, Normal, Charmander, Bulbasaur, Squirtle, Rattata} = require('./pokemon')
-const Pokeball = require('./pokeball')
-const Trainer = require('./trainer')
+const {Pokeball, Trainer} = require('./pokeball')
 
 describe("POKEMON", () => {
     describe ("Properties", () => {
@@ -282,3 +281,4 @@ describe("SPECIES", () => {
         })
         })
 })
+
