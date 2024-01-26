@@ -38,34 +38,28 @@ class Trainer{
             new Pokeball(), 
             new Pokeball(), 
             new Pokeball()]
-        // const pokeball1 = new Pokeball
-
-        // this.belt.push(pokeball1)
+        
         console.log(this.belt)
     }
     catch(pokemon){
-            
-    }
+        
+            this.belt.forEach((currentBall) => {
+                if (currentBall.isEmptyNow === true){
+                    currentBall.throw(pokemon)    
+                }
+        }
+            // if (this.belt[0].isEmptyNow === true){
+            //     this.belt[0].storage.push(pokemon)
+            // }
+    )}
 }
 
 /*
-Pokeball behaviours include:
+catch
 
-being able to store a Pokemon.
-throw it to catch a Pokemon.
-throw it to release it for battle.
-check which Pokemon is in the pokeball.
-
-Methods
-
-throw
-
-Takes a Pokemon object as an argument. If the pokeball is empty it will capture the passed Pokemon.
-If it isn't empty ,the user should not be allowed to capture a pokemon with it!
-The throw method should also console log something like ("you caught pokemonX's name") when a Pokemon has been caught.
-Additionally, the method can be invoked with no argument.
-In this case the method should return the stored Pokemon. The throw method should console log something like ("GO pokemonX's name!!") in this scenario.
-If the ball is empty then the user should be informed accordingly.
+Takes a Pokemon as an argument.
+It should use one of its empty Pokeball's throw method to catch the Pokemon.
+Should do something if you don't have any empty Pokeballs, what and how is up to you.
 
 */
 

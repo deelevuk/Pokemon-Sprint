@@ -62,9 +62,27 @@ describe ("POKEBALL", () => {
     });
 })
 describe.only ("TRAINER", () => {
-    test("belt has one pokeball in", () => {
+    test("belt has 6 pokeballs in", () => {
         const testTrainer = new Trainer()
-        console.log(testTrainer)
         
+        expect(testTrainer.belt).toEqual([
+             {isEmptyNow: true, storage: [] },
+             {isEmptyNow: true, storage: [] },
+             {isEmptyNow: true, storage: [] },
+             {isEmptyNow: true, storage: [] },
+             {isEmptyNow: true, storage: [] },
+             {isEmptyNow: true, storage: [] }
+          ])
     });
+    test("if the pokeball is empty, put the pokemon in to the storage", () => {
+        const testTrainer = new Trainer()
+        testTrainer.catch('Bulbasaur')
+        expect(testTrainer.belt[0].storage).toEqual(["Bulbasaur"])
+    })
+    test("When catch is invoked, finds the first available empty pokeball and using Throw puts the pokemon in that pokeball storage", () => {
+        const testTrainer = new Trainer()
+        testTrainer.catch('Bulbasaur')
+        console.log(testTrainer.belt)
+        expect(testTrainer.belt[0].storage).toEqual(["Bulbasaur"])
+    })
 });
