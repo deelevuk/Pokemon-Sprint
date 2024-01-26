@@ -1,8 +1,8 @@
 const {Pokemon, Fire, Water, Grass, Normal, Charmander, Bulbasaur, Squirtle, Rattata} = require('./pokemon')
+const Trainer = require('./trainer')
 
 class Pokeball {
     constructor (pokemon) {
-        this.pokemon = pokemon
         this.isEmptyNow = true
         this.storage = []
     }

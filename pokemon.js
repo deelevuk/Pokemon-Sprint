@@ -1,7 +1,5 @@
 const Pokeball = require('./pokeball')
-// Pokemon General
-// Type
-// Specific Pokemon
+const Trainer = require('./trainer')
 
 class Pokemon {
     constructor (name, hitPoints, attackDamage, move = "tackle")
@@ -10,7 +8,6 @@ class Pokemon {
         this.hitPoints = hitPoints
         this. attackDamage = attackDamage
         this.move = move
-        
     }
 
     takeDamage(damage){

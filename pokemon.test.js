@@ -1,5 +1,7 @@
 const {Pokemon, Fire, Water, Grass, Normal, Charmander, Bulbasaur, Squirtle, Rattata} = require('./pokemon')
 const Pokeball = require('./pokeball')
+const Trainer = require('./trainer')
+
 describe("POKEMON", () => {
     describe ("Properties", () => {
     test("shows that the Pokemon classes has 4 properties required ", () => {
