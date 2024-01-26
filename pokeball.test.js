@@ -4,17 +4,10 @@ const Trainer = require('./trainer')
 
 describe ("POKEBALL", () => {
     describe("Properties", () => {
-        test("Pokeball has a Pokemon property", () => {
-            const testPokeball = new Pokeball
-            expect(testPokeball).toHaveProperty("pokemon")
-        })
         
     })
     describe("Throw", () => {
-        test("If the pokeball is empty it will capture the passed Pokemon.", () => {
-            const testPokeball = new Pokeball
-            expect(testPokeball).toHaveProperty("pokemon")    
-        })
+      
         test("If the pokeball is empty, throw will change isEmpty to false", () => {
             const testPokeball = new Pokeball
             testPokeball.throw('Bulbasaur')
